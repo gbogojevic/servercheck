@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/Users/gbogojevic/.local/share/virtualenvs/servercheck-i7RVUvNC/bin/python",
+    "python.linting.enabled": true,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black"
+}
