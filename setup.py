@@ -16,7 +16,7 @@ NAME = "servercheck"
 DESCRIPTION = "Checkin if server are available."
 URL = "https://github.com/gbogojevic/servercheck"
 EMAIL = "me@example.com"
-AUTHOR = "Awesome Soul"
+AUTHOR = "A  wesome Soul"
 REQUIRES_PYTHON = ">=3.6.0"
 VERSION = "0.1.0"
 
@@ -104,9 +104,9 @@ setup(
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
     # py_modules=['mypackage'],
-    # entry_points={
-    #     'console_scripts': ['mycli=mymodule:cli'],
-    # },
+    entry_points={
+        "console_scripts": ["servercheck=servercheck.cli:cli"],
+    },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
