@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 click = "*"
 servercheck = {path = "."}
+requests = "*"
 
 [dev-packages]
 black = "*"

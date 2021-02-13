@@ -1,6 +1,7 @@
 import click
 import json
 import sys
+from .http import ping_servers
 
 
 @click.command()
@@ -30,8 +31,15 @@ def cli(filename, server):
         for s in server:
             servers.add(s)
 
-    print(servers)
+    # Make requests and collect results
+    results = ping_servers(servers)
 
+    print("Successful Connections")
+    print("---------------------")
+    for server in results["success"]:
+        print(server)
 
-if __name__ == "__main__":
-    cli()
+    print("\nFailed Connections")
+    print("------------------")
+    for server in results["failure"]:
+        print(server)

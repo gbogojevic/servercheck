@@ -13,7 +13,9 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = "servercheck"
-DESCRIPTION = "Checkin if server are available."
+DESCRIPTION = (
+    "CLI to ensure that HTTP requests can be made to various server/port combinations."
+)
 URL = "https://github.com/gbogojevic/servercheck"
 EMAIL = "me@example.com"
 AUTHOR = "A  wesome Soul"
@@ -21,7 +23,7 @@ REQUIRES_PYTHON = ">=3.6.0"
 VERSION = "0.1.0"
 
 # What packages are required for this module to be executed?
-REQUIRED = ["click"]
+REQUIRED = ["click", "requests"]
 
 # What packages are optional?
 EXTRAS = {
